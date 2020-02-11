@@ -4,7 +4,7 @@ from jetbot import Camera
 class Observer:
 
     def __init__(self, camera_width, camera_height):
-        self.camera = Camera(camera_width, camera_height)
+        self.camera = Camera(width=camera_width, height=camera_height)
         self.image = None
 
     def start(self):
