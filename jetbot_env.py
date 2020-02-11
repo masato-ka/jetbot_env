@@ -2,7 +2,7 @@ import numpy as np
 from gym import Env, spaces
 from jetbot import Robot
 
-from config import IMAGE_SIZE, MIN_STEERING, MAX_STEERING, IMAGE_HEIGHT, IMAGE_WIDTH
+from config import IMAGE_SIZE, MIN_STEERING, MAX_STEERING, IMAGE_HEIGHT, IMAGE_WIDTH, MIN_THROTTLE, MAX_THROTTLE
 from core.controller import RobotController
 from core.observer import Observer
 
@@ -17,8 +17,8 @@ class JetbotEnv(Env):
                                             high=np.finfo(np.float32).max,
                                             shape=IMAGE_SIZE,
                                             dtype=np.float32)
-        self.action_space = spaces.Box(low=np.array([MIN_STEERING, MIN_STEERING]),
-                                       high=np.array([MAX_STEERING, MAX_STEERING]), dtype=np.float32)
+        self.action_space = spaces.Box(low=np.array([MIN_STEERING, MIN_THROTTLE]),
+                                       high=np.array([MAX_STEERING, MAX_THROTTLE]), dtype=np.float32)
         self.ie = {}
 
     def step(self, action):
