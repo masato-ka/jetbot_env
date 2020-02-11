@@ -43,5 +43,5 @@ class JetbotEnv(Env):
         pass
 
     def close(self):
-        #TODO theredown thread.
+        self.observer.stop()
         pass
