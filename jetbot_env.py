@@ -21,6 +21,8 @@ class JetbotEnv(Env):
                                        high=np.array([MAX_STEERING, MAX_THROTTLE]), dtype=np.float32)
         self.ie = {}
 
+        self.observer.start()
+
     def step(self, action):
         self.controller.action(action[0], action[1])
         obs = self.observer.observation()
