@@ -2,10 +2,19 @@ import numpy as np
 from gym import Env, spaces
 from jetbot import Robot
 
-from .config import IMAGE_SIZE, MIN_STEERING, MAX_STEERING, IMAGE_HEIGHT, IMAGE_WIDTH, MIN_THROTTLE, MAX_THROTTLE
-from .core.controller import RobotController
-from .core.observer import Observer
+from core.controller import RobotController
+from core.observer import Observer
 
+#Camera settings
+IMAGE_WIDTH = 160
+IMAGE_HEIGHT = 120
+IMAGE_SIZE = (IMAGE_WIDTH, IMAGE_HEIGHT)
+
+#Actuator settings
+MIN_STEERING = 1.0
+MAX_STEERING = -1.0
+MIN_THROTTLE = 0.4
+MAX_THROTTLE = 1.0
 
 class JetbotEnv(Env):
 
