@@ -6,8 +6,8 @@ from core.controller import RobotController
 from core.observer import Observer
 
 #Camera settings
-IMAGE_WIDTH = 160
-IMAGE_HEIGHT = 120
+IMAGE_WIDTH = 320
+IMAGE_HEIGHT = 240
 IMAGE_SIZE = (IMAGE_WIDTH, IMAGE_HEIGHT)
 
 #Actuator settings
