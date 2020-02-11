@@ -19,6 +19,8 @@ class Observer:
         self.image = change['new']
 
     def observation(self):
+        while self.image is None:
+            pass
         return self.image
 
 
