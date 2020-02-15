@@ -15,8 +15,9 @@ class Observer:
         self.camera.stop()
 
     def _callback(self, change):
-        #TODO change BGR2RGB
-        self.image = change['new']
+        img = change['new']
+        self.image = img[:,:,::-1]
+
 
     def observation(self):
         while self.image is None:
