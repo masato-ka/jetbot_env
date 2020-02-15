@@ -2,7 +2,7 @@
 from jetbot import Robot
 class RobotController():
 
-    MAX_MOTORLIMIT = 1.0
+    MAX_MOTORLIMIT = 0.5
     MIN_MOTORLIMIT = 0.0
 
     def __init__(self):
