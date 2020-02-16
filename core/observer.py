@@ -16,8 +16,8 @@ class Observer:
 
     def _callback(self, change):
         img = change['new']
+        # Change BGR TO RGB HWC
         self.image = img[:,:,::-1]
-
 
     def observation(self):
         while self.image is None:
